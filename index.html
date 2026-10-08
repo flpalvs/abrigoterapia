@@ -191,6 +191,7 @@ document.getElementById('cards').innerHTML = team.map((p,i) => `<article class="
   const pos = [-23.5443, -46.5708];
   function init(){
     const map = L.map(el, {zoomControl:false, scrollWheelZoom:false, dragging:!L.Browser.mobile, attributionControl:true}).setView(pos, 16);
+    map.attributionControl.setPrefix(false);
     L.control.zoom({position:'topright'}).addTo(map);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(map);
     L.marker(pos, {keyboard:false, icon:L.divIcon({className:'pin', html:'<span class="pin-pulse"></span><span class="pin-dot"></span>', iconSize:[22,22], iconAnchor:[11,11]})}).addTo(map);
