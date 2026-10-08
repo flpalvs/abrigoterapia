@@ -12,7 +12,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,600;1,6..12,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +25,6 @@
     <ul class="menu" id="menu">
       <li><a href="#psicologos">Psicólogos</a></li>
       <li><a href="#como-funciona">Como funciona</a></li>
-      <li><a href="#local">Localização</a></li>
     </ul>
   </nav>
 </header>
@@ -75,21 +73,6 @@
   </div>
 </section>
 
-<section class="local" id="local">
-  <div class="wrap local-grid">
-    <div class="l">
-      <p class="label rv">Onde estamos</p>
-      <h2 class="display rv">Rua Serra de <em>Botucatu,</em> 113</h2>
-      <p class="addr rv">Vila Gomes Cardim, Tatuapé, São Paulo, SP</p>
-      <p class="addr-note rv">Atendimento presencial com a psicóloga <a href="psicologos/lucicleide-melo.html">Lucicleide Melo</a>.</p>
-      <a class="pill rv" href="https://www.google.com/maps/search/?api=1&query=Rua+Serra+de+Botucatu+113+Vila+Gomes+Cardim+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener"><i class="ph ph-map-pin" aria-hidden="true"></i>Ver localização</a>
-    </div>
-    <div class="r rv map" style="--d:2">
-      <div id="map" role="img" aria-label="Mapa da Rua Serra de Botucatu, 113, Tatuapé, São Paulo"></div>
-      <div class="map-card"><strong>Atendimento presencial</strong><span>Rua Serra de Botucatu, 113 · Tatuapé</span><a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Serra+de+Botucatu+113+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Como chegar <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div>
-    </div>
-  </div>
-</section>
 
 <section class="cta">
   <div class="wrap">
@@ -101,7 +84,6 @@
 <footer>
   <div class="word" aria-hidden="true">Abrigo<i>terapia</i></div>
   <div class="wrap foot">
-    <span>Atendimento presencial: Rua Serra de Botucatu, 113, Tatuapé, São Paulo</span>
     <span>© <span id="yr">2026</span> Abrigoterapia</span>
   </div>
 </footer>
@@ -173,7 +155,7 @@ document.getElementById('cards').innerHTML = team.map((p,i) => `<article class="
   <div class="info">
     <h3>${esc(p.n)}</h3>
     <p class="crp">${crpOf(p)}</p>
-    ${p.presencial?'<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>Atendimento presencial no Tatuapé</p>':''}
+    ${p.presencial?'<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>Presencial: Rua Serra de Botucatu, 113, Tatuapé</p>':''}
     <ul class="chips">${p.tags.slice(0,4).map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
     <p class="excerpt">${esc(p.quote || p.bio[0])}</p>
     <div class="actions">
@@ -185,21 +167,6 @@ document.getElementById('cards').innerHTML = team.map((p,i) => `<article class="
 
 
 
-/* mapa (carrega só quando chega perto) */
-(function(){
-  const el = document.getElementById('map'); if(!el) return;
-  const pos = [-23.5443, -46.5708];
-  function init(){
-    const map = L.map(el, {zoomControl:false, scrollWheelZoom:false, dragging:!L.Browser.mobile, attributionControl:true}).setView(pos, 16);
-    map.attributionControl.setPrefix(false);
-    L.control.zoom({position:'topright'}).addTo(map);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(map);
-    L.marker(pos, {keyboard:false, icon:L.divIcon({className:'pin', html:'<span class="pin-pulse"></span><span class="pin-dot"></span>', iconSize:[22,22], iconAnchor:[11,11]})}).addTo(map);
-    map.on('click', () => map.scrollWheelZoom.enable());
-  }
-  const io2 = new IntersectionObserver(es => { if(es[0].isIntersecting){ io2.disconnect(); const s = document.createElement('script'); s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload = init; s.onerror = () => { el.innerHTML = '<iframe title="Mapa" src="https://www.google.com/maps?q=Rua+Serra+de+Botucatu+113+Tatuap%C3%A9+S%C3%A3o+Paulo+SP&output=embed&hl=pt-BR" loading="lazy" style="width:100%;height:100%;border:0"></iframe>'; }; document.head.appendChild(s); } }, {rootMargin:'300px'});
-  io2.observe(el);
-})();
 
 const header = document.getElementById('top'), burger = document.getElementById('burger'), menu = document.getElementById('menu');
 function setMenu(o){ menu.classList.toggle('open',o); burger.setAttribute('aria-expanded',o); header.classList.toggle('menu-open',o); document.body.classList.toggle('lock',o); }

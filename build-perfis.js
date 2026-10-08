@@ -33,7 +33,6 @@ ${head}
     <ul class="menu" id="menu">
       <li><a href="../index.html#psicologos">Psicólogos</a></li>
       <li><a href="../index.html#como-funciona">Como funciona</a></li>
-      <li><a href="../index.html#local">Localização</a></li>
     </ul>
   </nav>
 </header>
@@ -47,7 +46,7 @@ ${head}
         <p class="label">Perfil profissional</p>
         <h1 class="display">${esc(p.n)}</h1>
         <p class="crp">${crpOf(p)}</p>
-        ${p.presencial?'<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>Atendimento presencial no Tatuapé</p>':''}
+        ${p.presencial?'<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>Presencial: Rua Serra de Botucatu, 113, Tatuapé</p>':''}
         <ul class="chips">${p.tags.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
         ${p.quote?`<p class="quote">“${esc(p.quote)}”</p>`:''}
         ${p.bio.map(t=>`<p class="t">${esc(t)}</p>`).join('\n        ')}
@@ -74,7 +73,6 @@ ${head}
 <footer>
   <div class="word" aria-hidden="true">Abrigo<i>terapia</i></div>
   <div class="wrap foot">
-    <span>Atendimento presencial: Rua Serra de Botucatu, 113, Tatuapé, São Paulo</span>
     <span>© <span id="yr">2026</span> Abrigoterapia</span>
   </div>
 </footer>

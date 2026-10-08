@@ -121,13 +121,6 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--glass);backdr
 .step h3{font-family:var(--sans);font-weight:700;font-size:1.35rem;line-height:1.3;color:var(--deep);margin-bottom:.8rem}
 .step p{margin-inline:auto;font-size:1.03rem;color:var(--body)}
 
-/* local */
-.local{background:var(--cream);padding:clamp(5rem,10vw,10rem) 0;overflow:hidden}
-.local-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:2rem;align-items:center}
-.local-grid .l{grid-column:1/8}
-.local h2{font-size:clamp(2.4rem,5vw,5rem);margin:1rem 0 1.2rem}
-.local .addr{font-size:1.2rem;color:var(--deep);margin-bottom:2.2rem}
-.local .r{grid-column:9/13;aspect-ratio:3/4.2;border-radius:16px;background:url(hero-bg.jpg) 14% 50%/cover no-repeat;filter:var(--hero-filter)}
 
 /* chamada final + rodape */
 .cta{padding:clamp(6rem,11vw,11rem) 0 clamp(3rem,5vw,5rem);text-align:center}
@@ -179,11 +172,10 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--glass);backdr
   .hero-inner{display:block;padding:2.9rem var(--gut) 4rem}
   .hero-copy{padding-left:0}
   .hero h1{font-size:clamp(2.9rem,13vw,4.4rem)}
-  .mani-grid,.local-grid{display:block}
+  .mani-grid{display:block}
   .mani-grid p,.mani-grid .sub{font-weight:600;margin-top:1.8rem}
   .mani-grid .mani-note{margin-top:2rem}
   .mani-note p{margin-top:0}
-  .local .r{aspect-ratio:4/3;width:100%;max-width:none;margin-top:2.6rem}
 
 
 
@@ -254,51 +246,16 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--glass);backdr
   .team::before,.cta::before,.cta::after{opacity:.4}
 }
 
-/* localizacao */
-.local{background:radial-gradient(60% 50% at 0% 100%,rgba(168,185,165,.22),transparent 70%),radial-gradient(70% 60% at 100% 0%,#fffaf2,transparent 70%),#faf4ea}
-.local-grid{position:relative}
-.local-grid::before,.local-grid::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(128,111,96,.35);pointer-events:none}
-.local-grid::before{width:clamp(320px,38vw,560px);aspect-ratio:1;left:calc(66.6% - 12%);top:-12%}
-.local-grid::after{width:clamp(280px,32vw,480px);aspect-ratio:1;right:-14%;bottom:-18%;border-color:rgba(128,111,96,.28)}
-.local .label{display:flex;align-items:center;gap:1.3rem;font-weight:400;letter-spacing:.34em;color:var(--body)}
-.local .label::after{content:"";width:56px;height:1px;background:var(--acc-text)}
-.local .addr{color:var(--acc-text)}
-.local .r{aspect-ratio:4/5;border-radius:28px;overflow:hidden;background:var(--tint);box-shadow:0 40px 70px -40px rgba(82,107,90,.45)}
-.local .r iframe{display:block;width:100%;height:100%;border:0;filter:saturate(.8) contrast(.97)}
-@media (max-width:860px){.local-grid::before,.local-grid::after{opacity:.6}}
-.local .r,.local .l{position:relative;z-index:1}
 
 /* linhas do hero */
 .hero::before{content:"";position:absolute;top:0;right:0;bottom:0;width:48%;pointer-events:none;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 900' preserveAspectRatio='xMaxYMid slice' fill='none' stroke='%237f9a86' stroke-width='1.5' stroke-linecap='round'><path d='M600 70C480 130 420 270 470 390S380 650 240 710'/><path d='M600 120C500 180 450 300 500 410S420 660 290 730' opacity='.7'/><path d='M600 170C520 230 480 330 530 430S460 670 340 750' opacity='.5'/><circle cx='500' cy='150' r='80' opacity='.5'/><circle cx='500' cy='150' r='130' opacity='.3'/><path d='M0 830C150 770 300 890 450 820S560 800 600 810' opacity='.6'/><path d='M0 870C150 810 300 930 450 860S560 840 600 850' opacity='.4'/></svg>") right center/cover no-repeat;opacity:.75}
 @media (max-width:860px){
   .hero::before{display:none}
 }
-.local-grid .l{grid-column:1/7}
-.local .r.map{grid-column:8/13;aspect-ratio:5/4}
-@media (max-width:860px){.local .r.map{aspect-ratio:4/3;margin-top:2.2rem}}
-
-/* mapa */
-.local .r.map{position:relative;z-index:1}
-#map{position:absolute;inset:0;background:#efe9de;font-family:var(--sans)}
-#map .leaflet-tile-pane{filter:grayscale(.75) sepia(.32) hue-rotate(45deg) saturate(.75) brightness(1.06) contrast(.92)}
-.leaflet-container a{color:var(--accent)}
-.leaflet-control-attribution{background:rgba(252,250,246,.8)!important;font-size:.68rem!important;color:var(--mute)!important}
-.leaflet-bar{border:0!important;box-shadow:0 8px 22px -10px rgba(47,40,34,.35)!important;border-radius:14px!important;overflow:hidden}
-.leaflet-bar a{background:rgba(252,250,246,.95)!important;color:var(--deep)!important;border-bottom:1px solid var(--hair)!important;width:38px!important;height:38px!important;line-height:38px!important}
-.pin{background:none;border:0}
-.pin-dot{position:absolute;inset:2px;border-radius:50%;background:var(--accent);border:3px solid #fff;box-shadow:0 6px 14px -4px rgba(47,40,34,.55)}
-.pin-pulse{position:absolute;inset:-14px;border-radius:50%;background:rgba(82,107,90,.28);animation:pinpulse 2.4s var(--ease) infinite}
-@keyframes pinpulse{0%{transform:scale(.4);opacity:.9}100%{transform:scale(1.25);opacity:0}}
-.map-card{position:absolute;left:14px;right:14px;bottom:14px;z-index:600;display:grid;gap:.15rem;padding:.9rem 1.1rem;border-radius:18px;background:rgba(252,250,246,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--hair);box-shadow:0 14px 30px -18px rgba(47,40,34,.45)}
-.map-card strong{font-size:1.05rem;color:var(--deep)}
-.map-card span{font-size:.95rem;color:var(--body)}
-.map-card a{display:inline-flex;align-items:center;gap:.3rem;width:fit-content;margin-top:.35rem;font-size:.95rem;font-weight:700;color:var(--accent);text-decoration:none;border-bottom:1.5px solid currentColor}
 
 /* atendimento presencial */
 .presencial{display:flex;align-items:center;gap:.45rem;margin:-.5rem 0 1.1rem;font-size:.98rem;font-weight:600;color:var(--deep)}
 .presencial i{font-size:1.15rem;color:var(--accent)}
-.addr-note{margin:-1.4rem 0 2rem;font-size:1.05rem;color:var(--body)}
-.addr-note a{color:var(--accent);font-weight:700}
 .p-local{display:flex;gap:1rem;align-items:flex-start;margin-top:2.4rem;padding:1.3rem 1.5rem;border-radius:var(--r);border:1px solid var(--hair);background:var(--white)}
 .p-local>i{font-size:1.6rem;color:var(--accent);margin-top:.15rem}
 .p-body .p-local h2{margin:0 0 .3rem}
