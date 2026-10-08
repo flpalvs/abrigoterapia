@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrigoterapia | Psicólogos no Tatuapé, São Paulo</title>
+<meta name="description" content="Abrigoterapia: um espaço para cuidar de você. Conheça nossos psicólogos no Tatuapé, em São Paulo, e encontre o profissional ideal para o seu momento.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FCFAF6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500;1,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400;1,6..12,600;1,6..12,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" class="brand" aria-label="Abrigoterapia, início">
+      <span>Abrigo<i>terapia</i></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+    <ul class="menu" id="menu">
+      <li><a href="#psicologos">Psicólogos</a></li>
+      <li><a href="#como-funciona">Como funciona</a></li>
+      <li><a href="#local">Localização</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-img" role="img" aria-label="Poltrona acolhedora com plantas e luz suave da tarde"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <h1 class="display rv" style="--d:4">Um espaço para <em>cuidar de você.</em></h1>
+      <p class="lead rv" style="--d:5">Um lugar de escuta e acolhimento, onde sua história importa e seu bem-estar encontra espaço para florescer.</p>
+      <a class="pill rv" style="--d:6" href="#psicologos">Conheça nossos psicólogos <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="wrap mani-grid">
+    <h2 class="display rv">Você não precisa passar por tudo <em>sozinho.</em></h2>
+    <div class="mani-note rv" style="--d:1"><p>Cada pessoa chega com uma <strong>história</strong>, um <strong>ritmo</strong> e uma <strong>necessidade</strong>.</p><p class="end">Aqui, o cuidado começa pela escuta.</p></div>
+  </div>
+</section>
+
+<section class="team" id="psicologos">
+  <div class="wrap">
+    <div class="team-head">
+      <h2 class="display rv">Encontre o profissional <em>ideal para você</em></h2>
+      <p class="rv">Cada história é única. Seu cuidado também.</p>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="how" id="como-funciona">
+  <div class="wrap">
+    <div class="how-head">
+      <h2 class="display rv">Como <em>funciona?</em></h2>
+      <p class="rv">Começar pode ser mais simples do que parece.</p>
+    </div>
+    <div class="steps">
+      <article class="step rv" style="--i:0"><span class="n">01</span><h3>Conheça nossos profissionais</h3><p>Veja as especialidades e abordagens de cada psicólogo.</p></article>
+      <article class="step rv" style="--i:1;--d:1"><span class="n">02</span><h3>Encontre alguém que faça sentido para você</h3><p>Conheça o perfil profissional e escolha de acordo com suas necessidades.</p></article>
+      <article class="step rv" style="--i:2;--d:2"><span class="n">03</span><h3>Agende seu primeiro atendimento</h3><p>Entre em contato e combine o melhor formato e horário.</p></article>
+      <article class="step rv" style="--i:3;--d:3"><span class="n">04</span><h3>Comece seu processo</h3><p>Tenha um espaço dedicado à escuta, reflexão e cuidado.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="local" id="local">
+  <div class="wrap local-grid">
+    <div class="l">
+      <p class="label rv">Onde estamos</p>
+      <h2 class="display rv">Rua Serra de <em>Botucatu,</em> 113</h2>
+      <p class="addr rv">Vila Gomes Cardim, Tatuapé, São Paulo, SP</p>
+      <a class="pill rv" href="https://www.google.com/maps/search/?api=1&query=Rua+Serra+de+Botucatu+113+Vila+Gomes+Cardim+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener"><i class="ph ph-map-pin" aria-hidden="true"></i>Ver localização</a>
+    </div>
+    <div class="r rv map" style="--d:2">
+      <div id="map" role="img" aria-label="Mapa da Rua Serra de Botucatu, 113, Tatuapé, São Paulo"></div>
+      <div class="map-card"><strong>Abrigoterapia</strong><span>Rua Serra de Botucatu, 113 · Tatuapé</span><a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Serra+de+Botucatu+113+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Como chegar <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2 class="display rv">Talvez o primeiro passo seja simplesmente <em>encontrar um lugar para falar.</em></h2>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="word" aria-hidden="true">Abrigo<i>terapia</i></div>
+  <div class="wrap foot">
+    <span>Rua Serra de Botucatu, 113, Tatuapé, São Paulo</span>
+    <span>© <span id="yr">2026</span> Abrigoterapia</span>
+  </div>
+</footer>
+
+<script>
+const WA = n => 'https://wa.me/55' + n.replace(/\D/g,'') + '?text=' + encodeURIComponent('Olá! Vim pelo site da Abrigoterapia e gostaria de agendar um atendimento.');
+
+const team = [
+ {n:'Pedro Henrique dos Santos Ariano Rodrigues',crp:'06/194069',img:'Pedro.jpg',slug:'pedro-henrique',tel:'(11) 98543-4549',
+  tags:['Psicanálise','TCC','Borderline','Bipolaridade','TDAH','Transtornos alimentares','Vícios'],
+  bio:[
+   'Sou psicólogo e atuo com uma escuta acolhedora, atenta e sem julgamentos, buscando compreender cada pessoa para além de um diagnóstico ou de uma dificuldade específica.',
+   'Ao longo da minha prática clínica, tenho experiência no acompanhamento de pessoas com questões relacionadas ao transtorno de personalidade borderline, transtorno bipolar, TDAH, transtornos alimentares e diferentes formas de vícios e comportamentos compulsivos. Também acompanho demandas ligadas a relacionamentos, autoestima, identidade, ansiedade, conflitos emocionais e momentos de mudança ou crise.',
+   'Meu trabalho transita principalmente entre a Psicanálise e a Terapia Cognitivo-Comportamental (TCC). Gosto de unir a profundidade da investigação sobre a história, os afetos e os padrões que se repetem com ferramentas mais práticas para lidar com aquilo que está acontecendo no presente.',
+   'Acredito que terapia não precisa ser um espaço excessivamente formal ou distante. É possível falar sobre assuntos difíceis com seriedade, mas também com leveza, espontaneidade e espaço para ser você mesmo.']},
+ {n:'Juliana Fernandes do Prado Froede',crp:'06/180573',img:'Juliana.jpg',slug:'juliana-froede',tel:'11 94760-6025',
+  tags:['TCC','TEA','ABA','Autoconhecimento'],
+  bio:[
+   'Sou psicóloga, graduada em Psicologia desde 2021, com atuação na área clínica fundamentada na Terapia Cognitivo-Comportamental (TCC).',
+   'Possuo pós-graduação em Transtorno do Espectro Autista (TEA) e em Análise do Comportamento Aplicada (ABA), formações que contribuem para uma compreensão ampliada dos aspectos cognitivos, emocionais e comportamentais de cada indivíduo.',
+   'Minha prática profissional é pautada no acolhimento, na escuta qualificada e na compreensão individualizada das necessidades de cada paciente. Por meio da Terapia Cognitivo-Comportamental, busco auxiliar no desenvolvimento de estratégias para o manejo das emoções, a identificação e reestruturação de padrões de pensamento e comportamento, além da promoção do autoconhecimento e da qualidade de vida.',
+   'Acredito que o processo psicoterapêutico deve ser construído de forma colaborativa, ética e individualizada, respeitando a singularidade, a história de vida e os objetivos de cada pessoa.']},
+ {n:'Michelle da Silva Ferreira',crp:'06/197798',img:'Michelle.jpg',slug:'michelle-ferreira',tel:'11 97638-1578',
+  tags:['TCC','Adultos (18+)','Habilidades socioemocionais'],
+  bio:[
+   'Psicóloga clínica e atua no atendimento de adultos, a partir dos 18 anos. Seu trabalho é baseado na Terapia Cognitivo-Comportamental e busca oferecer um espaço de escuta, acolhimento e reflexão, no qual cada paciente possa compreender melhor suas experiências, emoções e comportamentos.',
+   'Possui experiência em atendimento psicológico, acompanhamento de diferentes demandas emocionais e comportamentais, desenvolvimento de habilidades socioemocionais e elaboração de documentos psicológicos.',
+   'Em seu trabalho clínico, busca construir, junto ao paciente, um processo terapêutico individualizado, respeitando sua história, suas necessidades e o momento que está vivendo.']},
+ {n:'Juliana Maria de Lima',crp:'06/164083',img:'Juliana-2.jpg',slug:'juliana-lima',tel:'11 94456-0194',
+  tags:['TCC','Avaliação psicológica','Luto','Ansiedade','Depressão'],
+  quote:'Cuidar da saúde emocional é também aprender a compreender a si mesma.',
+  bio:[
+   'Sou psicóloga desde 2021 e atuo com atendimento psicológico, avaliação psicológica e intervenções psicológicas, buscando oferecer um espaço seguro, acolhedor e individualizado.',
+   'Minha atuação é fundamentada principalmente na Terapia Cognitivo-Comportamental (TCC), considerando as necessidades, características e objetivos de cada paciente.'],
+  extra:[
+   ['Formação',['Psicóloga desde 2021','Pós-graduação em Terapia Cognitivo-Comportamental (TCC)','Formação em Acolhimento ao Luto','Pós-graduação em Terapia Cognitivo-Comportamental para Crianças e Adolescentes (em formação)']],
+   ['Experiência clínica','Experiência no atendimento de demandas relacionadas a: Ansiedade, Depressão, Transtornos de Personalidade, TEA, TDAH, Luto, Questões emocionais e comportamentais. Também realizo Avaliação Psicológica e Intervenções Psicológicas, conforme as necessidades apresentadas em cada caso.'],
+   ['Meu trabalho','Acredito que cada pessoa possui uma história, necessidades e formas próprias de vivenciar suas dificuldades. Por isso, meu trabalho busca unir escuta acolhedora, conhecimento técnico e estratégias baseadas em evidências, respeitando a singularidade de cada paciente.'],
+   ['Atuação','Atendimento psicológico | Avaliação Psicológica | Terapia Cognitivo-Comportamental']]},
+ {n:'Letícia Catula Ricardo',crp:'06/180547',img:'Leticia.jpg',slug:'leticia-ricardo',tel:'11 95991-9472',
+  tags:['Adolescentes','Jovens adultos','Orientação profissional','Autoestima'],
+  bio:[
+   'Meu trabalho é ajudar pessoas a se compreenderem melhor e encontrarem formas mais saudáveis de lidar com aquilo que estão vivendo. Atendo principalmente adolescentes e jovens adultos, acompanhando questões como insegurança, autoestima, ansiedade, comunicação, relacionamentos e os desafios de cada fase da vida.',
+   'Na adolescência e no início da vida adulta, é comum surgirem muitas dúvidas sobre quem somos, como nos relacionamos com os outros e quais caminhos queremos seguir. Por isso, busco oferecer um espaço de escuta e acolhimento, mas também de reflexão e construção de novas possibilidades.',
+   'Também realizo orientação profissional, ajudando adolescentes e jovens adultos a conhecerem melhor seus interesses, habilidades e objetivos para tomar decisões sobre estudos e carreira com mais segurança e consciência.',
+   'Mais do que encontrar respostas prontas, acredito em um processo que ajude cada pessoa a entender melhor a si mesma e construir suas próprias escolhas.']},
+ {n:'Alberto Viana',crp:'06/177982',img:'Alberto.jpg',slug:'alberto-viana',tel:'11 95242-2279',
+  tags:['Adolescentes e adultos','Saúde mental','Vida profissional','Desenvolvimento emocional'],
+  bio:[
+   'Psicólogo com atuação clínica para adolescentes e adultos, com foco em saúde mental, desenvolvimento emocional, autoconhecimento e questões relacionadas à vida pessoal e profissional.',
+   'Minha trajetória reúne experiências em Psicologia Clínica, Recursos Humanos, liderança de equipes e atendimento ao público. Essa vivência ampliou minha compreensão sobre o comportamento humano e fortaleceu uma prática baseada em escuta qualificada, acolhimento e compreensão individual de cada paciente.',
+   'Na clínica, trabalho com uma abordagem focada no presente, auxiliando o paciente a compreender suas emoções, pensamentos e comportamentos e a desenvolver estratégias para lidar com os desafios de sua realidade.']},
+ {n:'Lucicleide Maria de Lima Melo',crp:'CRP-SP 06/154926',img:'Lucicleide.jpg',slug:'lucicleide-melo',tel:'11 97737-3420',
+  tags:['Neuropsicologia','TCC','TEA','TDAH','ABA','Crianças a idosos'],
+  bio:[
+   'Psicóloga e Neuropsicóloga, com experiência em avaliação, atendimento psicológico e intervenções com crianças, adolescentes, adultos e idosos. Atua em diferentes contextos clínicos, com abordagem fundamentada na Terapia Cognitivo-Comportamental (TCC), realizando psicoterapia, psicodiagnóstico e avaliação neuropsicológica.',
+   'Possui experiência com TEA, TDAH, síndromes raras e condições neurológicas, além de atuação em reabilitação infantil fundamentada nos princípios da Análise do Comportamento Aplicada (ABA) e orientação parental.']}
+];
+
+team.sort((a,b) => a.n.localeCompare(b.n,'pt-BR'));
+
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const crpOf = p => p.crp.startsWith('CRP') ? p.crp : 'CRP ' + p.crp;
+const slugOf = p => p.slug;
+const wa = p => `<a class="pill" href="${WA(p.tel)}" target="_blank" rel="noopener"><svg class="wa-ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>${esc(p.tel)}</a>`;
+
+document.getElementById('cards').innerHTML = team.map((p,i) => `<article class="card rv" style="--d:${i%2}">
+  <div class="photo"><img src="${p.img}" alt="Retrato de ${esc(p.n)}" width="500" height="650" loading="lazy" decoding="async"></div>
+  <div class="info">
+    <h3>${esc(p.n)}</h3>
+    <p class="crp">${crpOf(p)}</p>
+    <ul class="chips">${p.tags.slice(0,4).map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
+    <p class="excerpt">${esc(p.quote || p.bio[0])}</p>
+    <div class="actions">
+      <a class="pill ghost" href="psicologos/${p.slug}.html" aria-label="Ver perfil completo de ${esc(p.n)}">Ver perfil completo</a>
+      ${wa(p)}
+    </div>
+  </div>
+</article>`).join('');
+
+
+
+/* mapa (carrega só quando chega perto) */
+(function(){
+  const el = document.getElementById('map'); if(!el) return;
+  const pos = [-23.5443, -46.5708];
+  function init(){
+    const map = L.map(el, {zoomControl:false, scrollWheelZoom:false, dragging:!L.Browser.mobile, attributionControl:true}).setView(pos, 16);
+    L.control.zoom({position:'topright'}).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}).addTo(map);
+    L.marker(pos, {keyboard:false, icon:L.divIcon({className:'pin', html:'<span class="pin-pulse"></span><span class="pin-dot"></span>', iconSize:[22,22], iconAnchor:[11,11]})}).addTo(map);
+    map.on('click', () => map.scrollWheelZoom.enable());
+  }
+  const io2 = new IntersectionObserver(es => { if(es[0].isIntersecting){ io2.disconnect(); const s = document.createElement('script'); s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload = init; s.onerror = () => { el.innerHTML = '<iframe title="Mapa" src="https://www.google.com/maps?q=Rua+Serra+de+Botucatu+113+Tatuap%C3%A9+S%C3%A3o+Paulo+SP&output=embed&hl=pt-BR" loading="lazy" style="width:100%;height:100%;border:0"></iframe>'; }; document.head.appendChild(s); } }, {rootMargin:'300px'});
+  io2.observe(el);
+})();
+
+const header = document.getElementById('top'), burger = document.getElementById('burger'), menu = document.getElementById('menu');
+function setMenu(o){ menu.classList.toggle('open',o); burger.setAttribute('aria-expanded',o); header.classList.toggle('menu-open',o); document.body.classList.toggle('lock',o); }
+burger.addEventListener('click', () => setMenu(!menu.classList.contains('open')));
+menu.addEventListener('click', e => { if(e.target.closest('a')) setMenu(false); });
+
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const io = new IntersectionObserver(es => es.forEach(x => { if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); }}), {threshold:.08, rootMargin:'0px 0px -5% 0px'});
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+</script>
+</body>
+</html>
