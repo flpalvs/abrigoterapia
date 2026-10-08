@@ -81,11 +81,12 @@
       <p class="label rv">Onde estamos</p>
       <h2 class="display rv">Rua Serra de <em>Botucatu,</em> 113</h2>
       <p class="addr rv">Vila Gomes Cardim, Tatuapé, São Paulo, SP</p>
+      <p class="addr-note rv">Atendimento presencial com a psicóloga <a href="psicologos/lucicleide-melo.html">Lucicleide Melo</a>.</p>
       <a class="pill rv" href="https://www.google.com/maps/search/?api=1&query=Rua+Serra+de+Botucatu+113+Vila+Gomes+Cardim+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener"><i class="ph ph-map-pin" aria-hidden="true"></i>Ver localização</a>
     </div>
     <div class="r rv map" style="--d:2">
       <div id="map" role="img" aria-label="Mapa da Rua Serra de Botucatu, 113, Tatuapé, São Paulo"></div>
-      <div class="map-card"><strong>Abrigoterapia</strong><span>Rua Serra de Botucatu, 113 · Tatuapé</span><a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Serra+de+Botucatu+113+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Como chegar <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div>
+      <div class="map-card"><strong>Atendimento presencial</strong><span>Rua Serra de Botucatu, 113 · Tatuapé</span><a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Serra+de+Botucatu+113+Tatuap%C3%A9+S%C3%A3o+Paulo+SP" target="_blank" rel="noopener">Como chegar <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a></div>
     </div>
   </div>
 </section>
@@ -100,7 +101,7 @@
 <footer>
   <div class="word" aria-hidden="true">Abrigo<i>terapia</i></div>
   <div class="wrap foot">
-    <span>Rua Serra de Botucatu, 113, Tatuapé, São Paulo</span>
+    <span>Atendimento presencial: Rua Serra de Botucatu, 113, Tatuapé, São Paulo</span>
     <span>© <span id="yr">2026</span> Abrigoterapia</span>
   </div>
 </footer>
@@ -153,7 +154,7 @@ const team = [
    'Psicólogo com atuação clínica para adolescentes e adultos, com foco em saúde mental, desenvolvimento emocional, autoconhecimento e questões relacionadas à vida pessoal e profissional.',
    'Minha trajetória reúne experiências em Psicologia Clínica, Recursos Humanos, liderança de equipes e atendimento ao público. Essa vivência ampliou minha compreensão sobre o comportamento humano e fortaleceu uma prática baseada em escuta qualificada, acolhimento e compreensão individual de cada paciente.',
    'Na clínica, trabalho com uma abordagem focada no presente, auxiliando o paciente a compreender suas emoções, pensamentos e comportamentos e a desenvolver estratégias para lidar com os desafios de sua realidade.']},
- {n:'Lucicleide Maria de Lima Melo',crp:'CRP-SP 06/154926',img:'Lucicleide.jpg',slug:'lucicleide-melo',tel:'11 97737-3420',
+ {n:'Lucicleide Maria de Lima Melo',crp:'CRP-SP 06/154926',img:'Lucicleide.jpg',slug:'lucicleide-melo',tel:'11 97737-3420',presencial:true,
   tags:['Neuropsicologia','TCC','TEA','TDAH','ABA','Crianças a idosos'],
   bio:[
    'Psicóloga e Neuropsicóloga, com experiência em avaliação, atendimento psicológico e intervenções com crianças, adolescentes, adultos e idosos. Atua em diferentes contextos clínicos, com abordagem fundamentada na Terapia Cognitivo-Comportamental (TCC), realizando psicoterapia, psicodiagnóstico e avaliação neuropsicológica.',
@@ -172,6 +173,7 @@ document.getElementById('cards').innerHTML = team.map((p,i) => `<article class="
   <div class="info">
     <h3>${esc(p.n)}</h3>
     <p class="crp">${crpOf(p)}</p>
+    ${p.presencial?'<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>Atendimento presencial no Tatuapé</p>':''}
     <ul class="chips">${p.tags.slice(0,4).map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
     <p class="excerpt">${esc(p.quote || p.bio[0])}</p>
     <div class="actions">
