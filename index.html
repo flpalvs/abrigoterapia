@@ -93,21 +93,21 @@ const WA = n => 'https://wa.me/55' + n.replace(/\D/g,'') + '?text=' + encodeURIC
 
 const team = [
  {n:'Pedro Henrique dos Santos Ariano Rodrigues',crp:'06/194069',img:'Pedro.jpg',slug:'pedro-henrique',tel:'(11) 98543-4549',
-  tags:['Psicanálise','TCC','Borderline','Bipolaridade','TDAH','Transtornos alimentares','Vícios'],
+  tags:['Psicanálise','TCC','Ansiedade','Depressão','TDAH','Borderline','Bipolaridade','Transtornos alimentares','Vícios'],
   bio:[
    'Sou psicólogo e atuo com uma escuta acolhedora, atenta e sem julgamentos, buscando compreender cada pessoa para além de um diagnóstico ou de uma dificuldade específica.',
    'Ao longo da minha prática clínica, tenho experiência no acompanhamento de pessoas com questões relacionadas ao transtorno de personalidade borderline, transtorno bipolar, TDAH, transtornos alimentares e diferentes formas de vícios e comportamentos compulsivos. Também acompanho demandas ligadas a relacionamentos, autoestima, identidade, ansiedade, conflitos emocionais e momentos de mudança ou crise.',
    'Meu trabalho transita principalmente entre a Psicanálise e a Terapia Cognitivo-Comportamental (TCC). Gosto de unir a profundidade da investigação sobre a história, os afetos e os padrões que se repetem com ferramentas mais práticas para lidar com aquilo que está acontecendo no presente.',
    'Acredito que terapia não precisa ser um espaço excessivamente formal ou distante. É possível falar sobre assuntos difíceis com seriedade, mas também com leveza, espontaneidade e espaço para ser você mesmo.']},
  {n:'Juliana Fernandes do Prado Froede',crp:'06/180573',img:'Juliana.jpg',slug:'juliana-froede',tel:'11 94760-6025',
-  tags:['TCC','TEA','ABA','Autoconhecimento'],
+  tags:['TCC','Ansiedade','Depressão','Adultos','TEA','Autoconhecimento'],
   bio:[
    'Sou psicóloga, graduada em Psicologia desde 2021, com atuação na área clínica fundamentada na Terapia Cognitivo-Comportamental (TCC).',
    'Possuo pós-graduação em Transtorno do Espectro Autista (TEA) e em Análise do Comportamento Aplicada (ABA), formações que contribuem para uma compreensão ampliada dos aspectos cognitivos, emocionais e comportamentais de cada indivíduo.',
    'Minha prática profissional é pautada no acolhimento, na escuta qualificada e na compreensão individualizada das necessidades de cada paciente. Por meio da Terapia Cognitivo-Comportamental, busco auxiliar no desenvolvimento de estratégias para o manejo das emoções, a identificação e reestruturação de padrões de pensamento e comportamento, além da promoção do autoconhecimento e da qualidade de vida.',
    'Acredito que o processo psicoterapêutico deve ser construído de forma colaborativa, ética e individualizada, respeitando a singularidade, a história de vida e os objetivos de cada pessoa.']},
  {n:'Michelle da Silva Ferreira',crp:'06/197798',img:'Michelle.jpg',slug:'michelle-ferreira',tel:'11 97638-1578',
-  tags:['TCC','Adultos (18+)','Habilidades socioemocionais'],
+  tags:['TCC','Adultos (18+)','Ansiedade','TDAH','Depressão','Habilidades socioemocionais'],
   bio:[
    'Psicóloga clínica e atua no atendimento de adultos, a partir dos 18 anos. Seu trabalho é baseado na Terapia Cognitivo-Comportamental e busca oferecer um espaço de escuta, acolhimento e reflexão, no qual cada paciente possa compreender melhor suas experiências, emoções e comportamentos.',
    'Possui experiência em atendimento psicológico, acompanhamento de diferentes demandas emocionais e comportamentais, desenvolvimento de habilidades socioemocionais e elaboração de documentos psicológicos.',
@@ -117,21 +117,23 @@ const team = [
   quote:'Cuidar da saúde emocional é também aprender a compreender a si mesma.',
   bio:[
    'Sou psicóloga desde 2021 e atuo com atendimento psicológico, avaliação psicológica e intervenções psicológicas, buscando oferecer um espaço seguro, acolhedor e individualizado.',
-   'Minha atuação é fundamentada principalmente na Terapia Cognitivo-Comportamental (TCC), considerando as necessidades, características e objetivos de cada paciente.'],
+   'Minha atuação é fundamentada principalmente na Terapia Cognitivo-Comportamental (TCC), considerando as necessidades, características e objetivos de cada paciente.',
+   'Atendimento psicológico voltado a crianças, adolescentes e adultos, com foco na promoção da saúde mental, do autoconhecimento e do desenvolvimento emocional.'],
   extra:[
+   ['Principais demandas atendidas',['Transtornos de Ansiedade','Depressão e alterações do humor','Transtorno do Espectro Autista (TEA)','Transtorno do Déficit de Atenção e Hiperatividade (TDAH)','Conflitos amorosos e dificuldades nos relacionamentos','Autoestima, autoconfiança e autoconhecimento','Desenvolvimento de habilidades sociais e comunicação','Dependência química e questões relacionadas ao uso de substâncias']],
    ['Formação',['Psicóloga desde 2021','Pós-graduação em Terapia Cognitivo-Comportamental (TCC)','Formação em Acolhimento ao Luto','Pós-graduação em Terapia Cognitivo-Comportamental para Crianças e Adolescentes (em formação)']],
    ['Experiência clínica','Experiência no atendimento de demandas relacionadas a: Ansiedade, Depressão, Transtornos de Personalidade, TEA, TDAH, Luto, Questões emocionais e comportamentais. Também realizo Avaliação Psicológica e Intervenções Psicológicas, conforme as necessidades apresentadas em cada caso.'],
    ['Meu trabalho','Acredito que cada pessoa possui uma história, necessidades e formas próprias de vivenciar suas dificuldades. Por isso, meu trabalho busca unir escuta acolhedora, conhecimento técnico e estratégias baseadas em evidências, respeitando a singularidade de cada paciente.'],
    ['Atuação','Atendimento psicológico | Avaliação Psicológica | Terapia Cognitivo-Comportamental']]},
  {n:'Letícia Catula Ricardo',crp:'06/180547',img:'Leticia.jpg',slug:'leticia-ricardo',tel:'11 95991-9472',
-  tags:['Adolescentes','Jovens adultos','Orientação profissional','Autoestima'],
+  tags:['Adolescentes','Jovens adultos','TCC','Orientação profissional','Autoestima'],
   bio:[
    'Meu trabalho é ajudar pessoas a se compreenderem melhor e encontrarem formas mais saudáveis de lidar com aquilo que estão vivendo. Atendo principalmente adolescentes e jovens adultos, acompanhando questões como insegurança, autoestima, ansiedade, comunicação, relacionamentos e os desafios de cada fase da vida.',
    'Na adolescência e no início da vida adulta, é comum surgirem muitas dúvidas sobre quem somos, como nos relacionamos com os outros e quais caminhos queremos seguir. Por isso, busco oferecer um espaço de escuta e acolhimento, mas também de reflexão e construção de novas possibilidades.',
    'Também realizo orientação profissional, ajudando adolescentes e jovens adultos a conhecerem melhor seus interesses, habilidades e objetivos para tomar decisões sobre estudos e carreira com mais segurança e consciência.',
    'Mais do que encontrar respostas prontas, acredito em um processo que ajude cada pessoa a entender melhor a si mesma e construir suas próprias escolhas.']},
  {n:'Alberto Viana',crp:'06/177982',img:'Alberto.jpg',slug:'alberto-viana',tel:'11 95242-2279',
-  tags:['Adolescentes e adultos','Saúde mental','Vida profissional','Desenvolvimento emocional'],
+  tags:['Adultos','Ansiedade','Depressão','Bipolaridade','TDAH','Saúde mental','Vida profissional','Desenvolvimento emocional'],
   bio:[
    'Psicólogo com atuação clínica para adolescentes e adultos, com foco em saúde mental, desenvolvimento emocional, autoconhecimento e questões relacionadas à vida pessoal e profissional.',
    'Minha trajetória reúne experiências em Psicologia Clínica, Recursos Humanos, liderança de equipes e atendimento ao público. Essa vivência ampliou minha compreensão sobre o comportamento humano e fortaleceu uma prática baseada em escuta qualificada, acolhimento e compreensão individual de cada paciente.',
