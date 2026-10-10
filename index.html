@@ -112,7 +112,7 @@ const team = [
    'Psicóloga clínica e atua no atendimento de adultos, a partir dos 18 anos. Seu trabalho é baseado na Terapia Cognitivo-Comportamental e busca oferecer um espaço de escuta, acolhimento e reflexão, no qual cada paciente possa compreender melhor suas experiências, emoções e comportamentos.',
    'Possui experiência em atendimento psicológico, acompanhamento de diferentes demandas emocionais e comportamentais, desenvolvimento de habilidades socioemocionais e elaboração de documentos psicológicos.',
    'Em seu trabalho clínico, busca construir, junto ao paciente, um processo terapêutico individualizado, respeitando sua história, suas necessidades e o momento que está vivendo.']},
- {n:'Juliana Maria de Lima',crp:'06/164083',img:'Juliana-2.jpg',slug:'juliana-lima',tel:'11 94456-0194',
+ {n:'Juliana Maria de Lima',crp:'06/164083',img:'Juliana-2.jpg',slug:'juliana-lima',tel:'11 94456-0194',local:'Presencial e online: Campo Limpo, São Paulo',
   tags:['TCC','Avaliação psicológica','Luto','Ansiedade','Depressão'],
   quote:'Cuidar da saúde emocional é também aprender a compreender a si mesma.',
   bio:[
@@ -138,7 +138,7 @@ const team = [
    'Psicólogo com atuação clínica para adolescentes e adultos, com foco em saúde mental, desenvolvimento emocional, autoconhecimento e questões relacionadas à vida pessoal e profissional.',
    'Minha trajetória reúne experiências em Psicologia Clínica, Recursos Humanos, liderança de equipes e atendimento ao público. Essa vivência ampliou minha compreensão sobre o comportamento humano e fortaleceu uma prática baseada em escuta qualificada, acolhimento e compreensão individual de cada paciente.',
    'Na clínica, trabalho com uma abordagem focada no presente, auxiliando o paciente a compreender suas emoções, pensamentos e comportamentos e a desenvolver estratégias para lidar com os desafios de sua realidade.']},
- {n:'Lucicleide Maria de Lima Melo',crp:'CRP-SP 06/154926',img:'Lucicleide.jpg',slug:'lucicleide-melo',tel:'11 97737-3420',presencial:true,
+ {n:'Lucicleide Maria de Lima Melo',crp:'CRP-SP 06/154926',img:'Lucicleide.jpg',slug:'lucicleide-melo',tel:'11 97737-3420',presencial:true,local:'Presencial e online: Rua Serra de Botucatu, 113, Tatuapé',
   tags:['Neuropsicologia','TCC','TEA','TDAH','ABA','Crianças a idosos'],
   bio:[
    'Psicóloga e Neuropsicóloga, com experiência em avaliação, atendimento psicológico e intervenções com crianças, adolescentes, adultos e idosos. Atua em diferentes contextos clínicos, com abordagem fundamentada na Terapia Cognitivo-Comportamental (TCC), realizando psicoterapia, psicodiagnóstico e avaliação neuropsicológica.',
@@ -157,7 +157,7 @@ document.getElementById('cards').innerHTML = team.map((p,i) => `<article class="
   <div class="info">
     <h3>${esc(p.n)}</h3>
     <p class="crp">${crpOf(p)}</p>
-    ${p.presencial?'<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>Presencial: Rua Serra de Botucatu, 113, Tatuapé</p>':''}
+    ${p.local?`<p class="presencial"><i class="ph ph-map-pin" aria-hidden="true"></i>${esc(p.local)}</p>`:''}
     <ul class="chips">${p.tags.slice(0,4).map(t=>`<li>${esc(t)}</li>`).join('')}</ul>
     <p class="excerpt">${esc(p.quote || p.bio[0])}</p>
     <div class="actions">
