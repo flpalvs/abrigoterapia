@@ -17,9 +17,20 @@ team.forEach((p,i)=>{
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(p.n)} | Abrigoterapia</title>
+<title>${esc(p.n)} (${crpOf(p)}) | Psicologia em São Paulo | Abrigoterapia</title>
 <meta name="description" content="${desc}">
 <meta name="color-scheme" content="light">
+<link rel="canonical" href="https://abrigoterapia.com.br/psicologos/${p.slug}.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Abrigoterapia">
+<meta property="og:title" content="${esc(p.n)} | Psicologia em São Paulo">
+<meta property="og:description" content="${desc}">
+<meta property="og:url" content="https://abrigoterapia.com.br/psicologos/${p.slug}.html">
+<meta property="og:image" content="https://abrigoterapia.com.br/${p.img}">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">${JSON.stringify({"@context":"https://schema.org","@type":"Physician","name":p.n,"url":"https://abrigoterapia.com.br/psicologos/"+p.slug+".html","image":"https://abrigoterapia.com.br/"+p.img,"description":p.bio[0],"medicalSpecialty":"Psychiatric","knowsAbout":p.tags,"identifier":crpOf(p),"telephone":"+55"+p.tel.replace(/\D/g,''),"memberOf":{"@type":"Organization","name":"Abrigoterapia","url":"https://abrigoterapia.com.br/"},"areaServed":{"@type":"City","name":"São Paulo"}}).replace(/</g,'\u003c')}</script>
 ${head}
 <link rel="stylesheet" href="../style.css">
 </head>
@@ -90,3 +101,7 @@ document.getElementById('yr').textContent=new Date().getFullYear();
   fs.writeFileSync(root+'psicologos/'+p.slug+'.html',page);
 });
 console.log(team.map(p=>p.slug).join('\n'));
+
+const urls=[''].concat(team.map(p=>'psicologos/'+p.slug+'.html'));
+fs.writeFileSync(root+'sitemap.xml','<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+urls.map(u=>'  <url><loc>https://abrigoterapia.com.br/'+u+'</loc></url>').join('\n')+'\n</urlset>\n');
+fs.writeFileSync(root+'robots.txt','User-agent: *\nAllow: /\n\nSitemap: https://abrigoterapia.com.br/sitemap.xml\n');
