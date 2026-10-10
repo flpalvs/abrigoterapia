@@ -7,7 +7,7 @@ team.sort((a,b)=>a.n.localeCompare(b.n,'pt-BR'));
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
 const crpOf=p=>p.crp.startsWith('CRP')?p.crp:'CRP '+p.crp;
 const wa=n=>'https://wa.me/55'+n.replace(/\D/g,'')+'?text='+encodeURIComponent('Olá! Vim pelo site da Abrigoterapia e gostaria de agendar um atendimento.');
-const head=fs.readFileSync(root+'index.html','utf-8').match(/<link rel="preconnect"[\s\S]*?<link rel="stylesheet" href="https:\/\/unpkg[^>]*light\/style\.css">/)[0];
+const head=fs.readFileSync(root+'index.html','utf-8').match(/<link rel="preconnect"[\s\S]*?<\/noscript>/)[0];
 team.forEach((p,i)=>{
   const extra=(p.extra||[]).map(([h,c])=>`<h2>${h}</h2>`+(Array.isArray(c)?`<ul class="f">${c.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:`<p class="t">${esc(c)}</p>`)).join('\n      ');
   const others=team.filter((_,k)=>k!==i).map(o=>`<li><a href="${o.slug}.html"><img src="../${o.img}" alt="" loading="lazy" width="68" height="84"><span>${esc(o.n)}</span></a></li>`).join('\n      ');
