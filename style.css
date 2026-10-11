@@ -261,3 +261,7 @@ header{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--glass);backdr
 .p-body .p-local h2{margin:0 0 .3rem}
 .p-local p{margin:0 0 .5rem;color:var(--body)}
 .p-local a{font-weight:700;color:var(--accent)}
+
+/* credito do desenvolvedor */
+.footer-credit-link{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1.2rem;border-radius:50px;border:1px solid var(--hair);background:rgba(168,185,165,.12);color:var(--forest);text-decoration:none;font-size:.9rem;font-weight:500;transition:all .3s ease}
+.footer-credit-link:hover,.footer-credit-link:focus-visible{background:rgba(168,185,165,.28);border-color:var(--forest);color:var(--forest)}
