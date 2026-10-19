@@ -8,6 +8,30 @@ const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'
 const crpOf=p=>p.crp.startsWith('CRP')?p.crp:'CRP '+p.crp;
 const wa=n=>'https://wa.me/55'+n.replace(/\D/g,'')+'?text='+encodeURIComponent('Olá! Vim pelo site da Abrigoterapia e gostaria de agendar um atendimento.');
 const head=fs.readFileSync(root+'index.html','utf-8').match(/<link rel="preconnect"[\s\S]*?<\/noscript>/)[0];
+const reviews=JSON.parse(fs.readFileSync(root+'reviews.json','utf-8'));
+const star='<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.94 5.96 6.58.96-4.76 4.64 1.12 6.55L12 17.52l-5.88 3.09 1.12-6.55L2.48 9.42l6.58-.96z"/></svg>';
+const stars='<span class="stars" role="img" aria-label="5 de 5 estrelas">'+star.repeat(5)+'</span>';
+const initials=n=>n.trim().split(/\s+/).filter(w=>/^\p{L}/u.test(w)).slice(0,2).map(w=>w[0].toUpperCase()).join('');
+const revCard=([n,t])=>`<li class="rev"><div class="rev-top"><span class="av" aria-hidden="true">${esc(initials(n))}</span><div><strong>${esc(n)}</strong>${stars}</div></div><p>${esc(t)}</p></li>`;
+const reviewsHtml=slug=>{
+  const r=reviews[slug]; if(!r) return '';
+  const first=r.items.slice(0,6), rest=r.items.slice(6);
+  return `<section class="reviews" aria-labelledby="rev-h">
+  <div class="wrap">
+    <p class="label">Avaliações</p>
+    <h2 id="rev-h" class="display">O que dizem os pacientes</h2>
+    <p class="rev-sum">${stars}<strong>${r.nota}</strong><span>${r.total} avaliações no Google</span></p>
+    <ul class="rev-list">
+      ${first.map(revCard).join('\n      ')}
+    </ul>${rest.length?`
+    <details class="rev-more"><summary>Ver mais avaliações</summary>
+      <ul class="rev-list">
+        ${rest.map(revCard).join('\n        ')}
+      </ul>
+    </details>`:''}
+  </div>
+</section>`;
+};
 team.forEach((p,i)=>{
   const extra=(p.extra||[]).map(([h,c])=>`<h2>${h}</h2>`+(Array.isArray(c)?`<ul class="f">${c.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:`<p class="t">${esc(c)}</p>`)).join('\n      ');
   const others=team.filter((_,k)=>k!==i).map(o=>`<li><a href="${o.slug}.html"><img src="../${o.img}" alt="" loading="lazy" width="68" height="84"><span>${esc(o.n)}</span></a></li>`).join('\n      ');
@@ -72,6 +96,7 @@ ${head}
   </div>
 </main>
 
+${reviewsHtml(p.slug)}
 <section class="others" aria-labelledby="oth">
   <div class="wrap">
     <h2 id="oth" class="display">Conheça também</h2>
