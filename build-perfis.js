@@ -20,7 +20,7 @@ const reviewsHtml=slug=>{
   <div class="wrap">
     <p class="label">Avaliações</p>
     <h2 id="rev-h" class="display">O que dizem os pacientes</h2>
-    <p class="rev-sum">${stars}<strong>${r.nota}</strong><span>${r.total} avaliações no Google</span></p>
+    <p class="rev-sum">${stars}<strong>${r.nota}</strong><span>${r.total} ${r.total === 1 ? "avaliação" : "avaliações"} no Google</span></p>
     <ul class="rev-list">
       ${first.map(revCard).join('\n      ')}
     </ul>${rest.length?`
